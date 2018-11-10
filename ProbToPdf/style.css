@@ -5,7 +5,7 @@
     counter-reset: problem;
 }
 
-.solvedprob ul ul {
+.solvedprob ul ul, .extendlist ul ul {
     display: block !important;
 }
 .problem:after {

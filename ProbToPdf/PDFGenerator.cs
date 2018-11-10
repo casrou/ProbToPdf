@@ -13,14 +13,15 @@ namespace ProbToPdf
             String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
 
             List<Page> pages = new List<Page>();
+            pages.AddRange(book.Other.Where(p => p.Order < Order.LAST));
             book.Chapters.ForEach(c => pages.AddRange(c.Pages));
-            pages.AddRange(book.Other);
+            pages.AddRange(book.Other.Where(p => p.Order == Order.LAST));
 
             List<string> files = pages.Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html")).ToList();
 
             files.ForEach(f => Execute($"relaxed '{f}' --bo"));
 
-            Execute($"pdfunite {String.Join(" ", files.Select(f => f.Replace(".html", ".pdf")))} output.pdf");
+            Execute($"pdfunite {String.Join(" ", files.Select(f => f.Replace(".html", ".pdf")))} {path}\\output.pdf");
         }
 
         private static void Execute(string command)
