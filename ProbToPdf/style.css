@@ -1,0 +1,18 @@
+﻿body {
+    background: none;
+    background-color: white;
+    margin: 2em 4em;
+    counter-reset: problem;
+}
+
+.solvedprob ul ul {
+    display: block !important;
+}
+.problem:after {
+    counter-increment: problem 1;
+    content: counter(problem);
+}
+
+@page {
+    margin: 15mm 10mm 15mm 10mm;
+}

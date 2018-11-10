@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fizzler.Systems.HtmlAgilityPack" Version="1.2.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.9" />
+    <PackageReference Include="microsoft.powershell.commands.diagnostics" Version="6.0.0-rc" />
+    <PackageReference Include="microsoft.powershell.sdk" Version="6.0.0-rc" />
+    <PackageReference Include="microsoft.wsman.management" Version="6.0.0-rc" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="book.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

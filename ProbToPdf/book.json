@@ -1,0 +1,78 @@
+// H. Pishro-Nik, "Introduction to probability, statistics, and random processes",
+// available at https://www.probabilitycourse.com, Kappa Research LLC, 2014.
+// Licensed under CC BY-NC-ND 3.0 (https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US)
+{
+  "title": "Introduction to Probability, Statistics, and Random Processes",
+  "author": "Hossein Pishro-Nik",
+  "other": [
+    {
+      "url": "https://www.probabilitycourse.com/preface.php",
+      "order": "FIRST"
+    },
+    {
+      "url": "https://www.probabilitycourse.com/bibliography.php",
+      "order": "LAST"
+    }
+  ],
+  "chapters": [
+    //{ // chapter 1
+    //  "pages": [
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_0_0_introduction.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_1_0_what_is_probability.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_1_1_example.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_0_review_set_theory.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_1_venn.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_2_set_operations.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_3_cardinality.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_4_functions.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_2_5_solved1.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_1_random_experiments.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_2_probability.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_3_finding_probabilities.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_4_discrete_models.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_5_continuous_models.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_3_6_solved2.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_0_conditional_probability.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_1_independence.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_2_total_probability.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_3_bayes_rule.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_4_conditional_independence.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_4_5_solved3.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter1/1_5_0_chapter1_problems.php" }
+    //  ]
+    //},
+    //{ // chapter 2
+    //  "pages": [
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_0_counting.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_1_ordered_with_replacement.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_2_ordered_without_replacement.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_3_unordered_without_replacement.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_4_unordered_with_replacement.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_5_solved2_1.php" },
+    //    { "url": "https://www.probabilitycourse.com/chapter2/2_3_0_chapter2_problems.php" }
+    //  ]
+    //},
+    { // chapter 3
+      "pages": [
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_1_random_variables.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_2_discrete_random_var.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_3_pmf.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_4_independent_random_var.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_5_special_discrete_distr.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_1_6_solved3_1.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_2_1_cdf.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_2_2_expectation.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_2_3_functions_random_var.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_2_4_variance.php" },
+        //{ "url": "https://www.probabilitycourse.com/chapter3/3_2_5_solved3_2.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_3_0_chapter3_problems.php" }
+      ]
+    },
+    {
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/appendix/review_fourier_transform.php" },
+        { "url": "https://www.probabilitycourse.com/appendix/some_important_distributions.php" }
+      ]
+    }
+  ]
+}
