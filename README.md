@@ -20,5 +20,5 @@ Then, use `pdftk` to merge the PDFs:
 - Navigate to the `book` folder on the Desktop
 - Run
 ```
-"pdftk *.pdf cat output output.pdf"
+pdftk *.pdf cat output output.pdf
 ```
