@@ -7,19 +7,18 @@ Downloads an exam-friendly, offline, searchable PDF version of the textbook
 ```
 npm i -g relaxedjs
 ```
-- `pdfunite`
+- `pdftk`
 
-  Linux: Available
-
-  Windows:
-```
-  https://blog.alivate.com.au/poppler-windows/
-```
+Download [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 
 ## How to
-The program downloads and generates all the pages to a folder named `book` on the Desktop. The final pdf is named `output.pdf`.
+The program downloads and generates all the pages as PDF to a folder named `book` on the Desktop.
 
-If you have problems installing `pdfunite`, install [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/), navigate to the `book`-folder and use 
+Then, use `pdftk` to merge the PDFs:
+
+- Open Terminal/Powershell
+- Navigate to the `book` folder on the Desktop
+- Run
 ```
-$"pdftk *.pdf cat output output.pdf"
+"pdftk *.pdf cat output output.pdf"
 ```
