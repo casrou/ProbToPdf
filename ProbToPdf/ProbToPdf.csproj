@@ -12,6 +12,7 @@
     <PackageReference Include="microsoft.powershell.sdk" Version="6.0.0-rc" />
     <PackageReference Include="microsoft.wsman.management" Version="6.0.0-rc" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
