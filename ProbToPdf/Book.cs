@@ -17,19 +17,20 @@ namespace ProbToPdf
         public Book(string filePath)
         {
             string json = File.ReadAllText(filePath);
+            Log.Information("Getting book template from json: " + filePath);
             JsonConvert.PopulateObject(json, this);
             Process();
         }
 
         private void Process()
         {
-            Chapters.ForEach(c => c.Pages.ForEach(p => p.Process()));
             Other.ForEach(o => o.Process());
+            Chapters.ForEach(c => c.Pages.ForEach(p => p.Process()));            
         }
 
         public override string ToString()
         {
-            //return $"{Title} by {Author}";
+            //return $"{Title} - {Author}";
             return "book";
         }
     }
