@@ -17,6 +17,10 @@ namespace ProbToPdf
 
         public void Process()
         {
+            if (Path.GetExtension(Url) == ".pdf")
+            {
+                return;
+            };
             Content = GetPage(Url);
         }
 
@@ -26,11 +30,9 @@ namespace ProbToPdf
             HtmlDocument html = DownloadHtml(url);
 
             string result = ParseHtml(html).InnerHtml;
-
             result = FixInlineMath(result);
             result = AddStyling(result);
-
-            //return AddStyling(FixInlineMath(html.OuterHtml)).Trim();
+            
             return result;
         }
 
@@ -102,9 +104,20 @@ namespace ProbToPdf
                 newSrc = (!newSrc.StartsWith("http") && !newSrc.StartsWith("www")) ? "https://www.probabilitycourse.com/" + newSrc : newSrc;
                 src.Attributes["src"].Value = newSrc;
             }
-        }        
+        }
 
-        // Change '$ *equation* $' to '\\( *equation* \\)'
+        /*
+            Corrects inline math surrounded by dollar signs ($), since
+            the MathJax plugin for ReLaXed needs inline equations
+            to be surrounded by \\( and \\). 
+            (Display math surrounded by double dollar sign ($$),
+             needs to stay the same)
+
+            Example:
+                Here is an equation: $ 1+1=2 $
+            becomes
+                Here is an equation: \\( 1+1=2 \\)
+        */
         private static string FixInlineMath(string content)
         {
             int counter = 0;
