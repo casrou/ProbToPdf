@@ -38,7 +38,8 @@ namespace ProbToPdf
         public void Process()
         {
             //GetPages().ForEach(p => p.Process());
-            Parallel.ForEach(GetPages().Where(page => Path.GetExtension(page.Url) != ".pdf"), p => p.Process(_services.GetService<HtmlWeb>()));            
+            GetPages().Where(page => Path.GetExtension(page.Url) != ".pdf").ToList().ForEach(p => p.Process(_services.GetService<HtmlWeb>()));
+            //Parallel.ForEach(GetPages().Where(page => Path.GetExtension(page.Url) != ".pdf"), p => p.Process(_services.GetService<HtmlWeb>()));            
         }
 
         public override string ToString()

@@ -17,6 +17,8 @@ namespace ProbToPdf
 {
     class Program
     {
+        private static Stopwatch _stopwatch;
+
         static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
@@ -31,21 +33,22 @@ namespace ProbToPdf
                 //.AddTransient<ICar, Car>()
                 .BuildServiceProvider();
             
-            //Stopwatch stopwatch = Stopwatch.StartNew();
+            _stopwatch = Stopwatch.StartNew();
 
             Book book = new Book("book.json", services);
-
             book.Process();
 
             Downloader downloader = new Downloader(book);
-            Downloader.Download(book);
+            downloader.Download(book);
+
+            PDFGenerator generator = new PDFGenerator(book);            
+            generator.Generate(book);
             
-            PDFGenerator.Generate(book);
-            
-            //stopwatch.Stop();
+            _stopwatch.Stop();
 
             // Write hours, minutes and seconds.
-            //Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", stopwatch.Elapsed);
+            Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", _stopwatch.Elapsed);
+
             Console.ReadLine();
         }
     }

@@ -10,34 +10,31 @@ namespace ProbToPdf
 {
     class PDFGenerator
     {
-        internal static void Generate(Book book)
+        private string _path;
+
+        public PDFGenerator(Book book)
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+            _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+        }
 
-            // Get all pages from book in correct order
-            List<Page> pages = new List<Page>();
-            pages.AddRange(book.Other.Where(p => p.Order < Order.LAST));
-            book.Chapters.ForEach(c => pages.AddRange(c.Pages.Where(p => Path.GetExtension(p.Url) != ".pdf")));
-            pages.AddRange(book.Other.Where(p => p.Order == Order.LAST));
-
+        public void Generate(Book book)
+        {            
             // Get filename of all pages
-            List<string> files = pages.Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html")).ToList();
+            List<string> files = book.GetPages().Select(p => _path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html")).ToList();
 
             // Generate pdfs
             //files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
             var result = Parallel.ForEach(files, f => Execute($"relaxed \"{f}\" --bo"));
 
             // Remove temporary files
-            RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
-            RemoveFiles(files);
+            RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));    // *_temp.htm
+            RemoveFiles(files);                                                 // *.html
 
-            // WIP: Merge all pdfs
-            //Execute($"pdftk {path}\\*.pdf cat output {path}\\output.pdf");
-            Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
-            //Execute($"pdfunite {path}\\*.pdf {path}\\output.pdf");
+            // Merge all pdfs
+            Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {_path}\\output.pdf");
         }
-
-        private static void Execute(string command)
+        
+        private void Execute(string command)
         {
             Log.Information("Executing: " + command);
             using (var ps = PowerShell.Create())
@@ -58,7 +55,7 @@ namespace ProbToPdf
             }
         }
 
-        private static void RemoveFiles(IEnumerable<string> filePaths)
+        private void RemoveFiles(IEnumerable<string> filePaths)
         {
             foreach (var file in filePaths)
             {

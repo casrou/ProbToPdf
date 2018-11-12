@@ -36,217 +36,217 @@
         { "url": "https://www.probabilitycourse.com/chapter1/1_5_0_chapter1_problems.php" }
       ]
     },
-    //{ // Chapter 2
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_0_counting.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_1_ordered_with_replacement.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_2_ordered_without_replacement.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_3_unordered_without_replacement.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_4_unordered_with_replacement.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_1_5_solved2_1.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter2/2_3_0_chapter2_problems.php" }
-    //  ]
-    //},
-    //{ // Chapter 3
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_1_random_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_2_discrete_random_var.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_3_pmf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_4_independent_random_var.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_5_special_discrete_distr.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_1_6_solved3_1.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_2_1_cdf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_2_2_expectation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_2_3_functions_random_var.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_2_4_variance.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_2_5_solved3_2.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter3/3_3_0_chapter3_problems.php" }
-    //  ]
-    //},
-    //{ // Chapter 4
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_0_0_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_1_0_continuous_random_vars_distributions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_1_1_pdf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_1_2_expected_val_variance.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_1_3_functions_continuous_var.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_1_4_solved4_1.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_1_uniform.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_2_exponential.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_3_normal.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_4_Gamma_distribution.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_5_other_distr.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_2_6_solved4_2.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_3_1_mixed.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_3_2_delta_function.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_3_3_solved4_3.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter4/4_4_0_chapter4_problems.php" }
-    //  ]
-    //},
-    //{ // Chapter 5
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_0_joint_distributions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_1_joint_pmf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_2_joint_cdf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_3_conditioning_independence.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_4_functions_two_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_5_conditional_expectation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_1_6_solved_prob.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_0_continuous_vars.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_1_joint_pdf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_2_joint_cdf.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_3_conditioning_independence.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_4_functions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_2_5_solved_prob.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_3_1_covariance_correlation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_3_3_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter5/5_4_0_chapter_problems.php" }
-    //  ]
-    //},
-    //{ // Chapter 6
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_0_0_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_1_joint_distributions_independence.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_2_sums_random_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_3_moment_functions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_4_characteristic_functions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_5_random_vectors.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_1_6_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_0_probability_bounds.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_1_union_bound_and_exten.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_2_markov_chebyshev_inequalities.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_3_chernoff_bounds.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_4_cauchy_schwarz.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_5_jensen's_inequality.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_2_6_solved6_2.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter6/6_3_0_chapter_problems.php" }
-    //  ]
-    //},
-    //{ // Chapter 7
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_0_0_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_1_0_limit_theorems.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_1_1_law_of_large_numbers.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_1_3_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_0_convergence_of_random_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_1_convergence_of_a_seq_of_nums.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_2_sequence_of_random_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_3_different_types_of_convergence_for_sequences_of_random_variables.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_4_convergence_in_distribution.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_5_convergence_in_probability.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_6_convergence_in_mean.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_7_almost_sure_convergence.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_2_8_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter7/7_3_0_chapter_problem.php" }
-    //  ]
-    //},
-    //{ // Chapter 8
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_1_0_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_1_1_random_sampling.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_0_point_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_1_evaluating_estimators.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_2_point_estimators_for_mean_and_var.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_3_max_likelihood_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_4_asymptotic_probs_of_MLE.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_2_5_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_3_0_interval_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_3_1_gen_framework_of_int_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_3_2_finding_interval_estimators.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_3_3_confidence_intervals_for_norm_samples.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_3_4_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_1_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_2_general_setting_definitions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_3_hypothesis_testing_for_mean.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_4_p_vals.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_5_likelihood_ratio_tests.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_4_6_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_0_linear_regression.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_1_simple_linear_regression_model.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_2_first_method_for_finding_beta.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_3_the_method_of_least_squares.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_4_extensions_and_issues.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_5_5_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter8/8_6_0_ch_probs.php" },
-    //  ]
-    //},
-    //{ // Chapter 9
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_0_bayesian_inference.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_10_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_1_prior_and_posterior.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_2_MAP_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_3_comparison_to_ML_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_4_conditional_expectation_MMSE.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_5_mean_squared_error_MSE.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_6_linear_MMSE_estimat_of_random_vars.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_7_estimation_for_random_vectors.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_8_bayesian_hypothesis_testing.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_1_9_bayesian_interval_estimation.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter9/9_2_0_ch_probs.php" },
-    //  ]
-    //},
-    //{ // Chapter 10
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_1_PDFs_and_CDFs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_3_multiple_random_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_5_gaussian_random_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_1_6_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_0_processing_of_random_signals.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_1_power_spectral_density.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_2_LTI_systems_with_random_inputs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_3_power_in_a_frequency_band.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_4_white_noise.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_2_5_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter10/10_3_0_ch_probs.php" },
-    //  ]
-    //},
-    //{ // Chapter 11
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_0_0_intro.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_1_1_counting_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_1_3_merging_and_splitting_poisson_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_1_4_nonhomogeneous_poisson_processes.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_1_5_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_5_using_the_law_of_total_probability_with_recursion.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_6_stationary_and_limiting_distributions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_2_7_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_3_1_introduction.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_3_2_stationary_and_limiting_distributions.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_3_3_the_generator_matrix.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_3_4_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_4_0_brownian_motion_wiener_process.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_4_1_brownian_motion_as_the_limit_of_a_symmetric_random_walk.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_4_2_definition_and_some_properties.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_4_3_solved_probs.php" },
-    //    { "url": "https://www.probabilitycourse.com/chapter11/11_5_0_end_of_chapter_problems.php" },
-    //  ]
-    //},
-    //{ // Chapter 12
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter12/Chapter_12.pdf" }
-    //  ]
-    //},
-    //{ // Chapter 13
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter13/Chapter_13.pdf" }
-    //  ]
-    //},
-    //{ // Chapter 14
-    //  "pages": [
-    //    { "url": "https://www.probabilitycourse.com/chapter14/Chapter_14.pdf" }
-    //  ]
-    //},
+    { // Chapter 2
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_0_counting.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_1_ordered_with_replacement.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_2_ordered_without_replacement.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_3_unordered_without_replacement.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_4_unordered_with_replacement.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_1_5_solved2_1.php" },
+        { "url": "https://www.probabilitycourse.com/chapter2/2_3_0_chapter2_problems.php" }
+      ]
+    },
+    { // Chapter 3
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_1_random_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_2_discrete_random_var.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_3_pmf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_4_independent_random_var.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_5_special_discrete_distr.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_1_6_solved3_1.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_2_1_cdf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_2_2_expectation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_2_3_functions_random_var.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_2_4_variance.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_2_5_solved3_2.php" },
+        { "url": "https://www.probabilitycourse.com/chapter3/3_3_0_chapter3_problems.php" }
+      ]
+    },
+    { // Chapter 4
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter4/4_0_0_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_1_0_continuous_random_vars_distributions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_1_1_pdf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_1_2_expected_val_variance.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_1_3_functions_continuous_var.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_1_4_solved4_1.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_1_uniform.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_2_exponential.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_3_normal.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_4_Gamma_distribution.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_5_other_distr.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_2_6_solved4_2.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_3_1_mixed.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_3_2_delta_function.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_3_3_solved4_3.php" },
+        { "url": "https://www.probabilitycourse.com/chapter4/4_4_0_chapter4_problems.php" }
+      ]
+    },
+    { // Chapter 5
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_0_joint_distributions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_1_joint_pmf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_2_joint_cdf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_3_conditioning_independence.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_4_functions_two_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_5_conditional_expectation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_1_6_solved_prob.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_0_continuous_vars.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_1_joint_pdf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_2_joint_cdf.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_3_conditioning_independence.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_4_functions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_2_5_solved_prob.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_3_1_covariance_correlation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_3_3_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter5/5_4_0_chapter_problems.php" }
+      ]
+    },
+    { // Chapter 6
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter6/6_0_0_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_1_joint_distributions_independence.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_2_sums_random_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_3_moment_functions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_4_characteristic_functions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_5_random_vectors.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_1_6_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_0_probability_bounds.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_1_union_bound_and_exten.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_2_markov_chebyshev_inequalities.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_3_chernoff_bounds.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_4_cauchy_schwarz.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_5_jensen's_inequality.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_2_6_solved6_2.php" },
+        { "url": "https://www.probabilitycourse.com/chapter6/6_3_0_chapter_problems.php" }
+      ]
+    },
+    { // Chapter 7
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter7/7_0_0_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_1_0_limit_theorems.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_1_1_law_of_large_numbers.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_1_3_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_0_convergence_of_random_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_1_convergence_of_a_seq_of_nums.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_2_sequence_of_random_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_3_different_types_of_convergence_for_sequences_of_random_variables.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_4_convergence_in_distribution.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_5_convergence_in_probability.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_6_convergence_in_mean.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_7_almost_sure_convergence.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_2_8_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter7/7_3_0_chapter_problem.php" }
+      ]
+    },
+    { // Chapter 8
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter8/8_1_0_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_1_1_random_sampling.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_0_point_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_1_evaluating_estimators.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_2_point_estimators_for_mean_and_var.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_3_max_likelihood_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_4_asymptotic_probs_of_MLE.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_2_5_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_3_0_interval_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_3_1_gen_framework_of_int_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_3_2_finding_interval_estimators.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_3_3_confidence_intervals_for_norm_samples.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_3_4_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_1_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_2_general_setting_definitions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_3_hypothesis_testing_for_mean.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_4_p_vals.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_5_likelihood_ratio_tests.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_4_6_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_0_linear_regression.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_1_simple_linear_regression_model.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_2_first_method_for_finding_beta.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_3_the_method_of_least_squares.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_4_extensions_and_issues.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_5_5_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter8/8_6_0_ch_probs.php" },
+      ]
+    },
+    { // Chapter 9
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_0_bayesian_inference.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_10_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_1_prior_and_posterior.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_2_MAP_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_3_comparison_to_ML_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_4_conditional_expectation_MMSE.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_5_mean_squared_error_MSE.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_6_linear_MMSE_estimat_of_random_vars.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_7_estimation_for_random_vectors.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_8_bayesian_hypothesis_testing.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_1_9_bayesian_interval_estimation.php" },
+        { "url": "https://www.probabilitycourse.com/chapter9/9_2_0_ch_probs.php" },
+      ]
+    },
+    { // Chapter 10
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_1_PDFs_and_CDFs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_3_multiple_random_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_5_gaussian_random_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_1_6_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_0_processing_of_random_signals.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_1_power_spectral_density.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_2_LTI_systems_with_random_inputs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_3_power_in_a_frequency_band.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_4_white_noise.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_2_5_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter10/10_3_0_ch_probs.php" },
+      ]
+    },
+    { // Chapter 11
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter11/11_0_0_intro.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_1_1_counting_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_1_3_merging_and_splitting_poisson_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_1_4_nonhomogeneous_poisson_processes.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_1_5_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_5_using_the_law_of_total_probability_with_recursion.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_6_stationary_and_limiting_distributions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_2_7_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_3_1_introduction.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_3_2_stationary_and_limiting_distributions.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_3_3_the_generator_matrix.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_3_4_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_4_0_brownian_motion_wiener_process.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_4_1_brownian_motion_as_the_limit_of_a_symmetric_random_walk.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_4_2_definition_and_some_properties.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_4_3_solved_probs.php" },
+        { "url": "https://www.probabilitycourse.com/chapter11/11_5_0_end_of_chapter_problems.php" },
+      ]
+    },
+    { // Chapter 12
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter12/Chapter_12.pdf" }
+      ]
+    },
+    { // Chapter 13
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter13/Chapter_13.pdf" }
+      ]
+    },
+    { // Chapter 14
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/chapter14/Chapter_14.pdf" }
+      ]
+    },
     { // Appendix
       "pages": [
         { "url": "https://www.probabilitycourse.com/appendix/review_fourier_transform.php" },

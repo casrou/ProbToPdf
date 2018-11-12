@@ -25,16 +25,9 @@ namespace ProbToPdf
 
         internal void Download(Book book)
         {
-            //book.Other
-            //    .ForEach(p => WritePage(p, path));
-
-            book.GetPages()
-                .ForEach(p => WritePage(p, _path));
-        }
-
-        internal void Download(Page page)
-        {
-            WritePage(page, _path);
+            //book.GetPages()
+            //    .ForEach(p => WritePage(p, _path));
+            Parallel.ForEach(book.GetPages(), p => WritePage(p, _path));
         }
 
         private static void WritePage(Page p, string path)
