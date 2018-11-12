@@ -10,18 +10,21 @@ namespace ProbToPdf
 {
     class PDFGenerator
     {
-        internal static void Generate(Book book)
+        private Book _book;
+
+        public PDFGenerator(Book book)
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+            _book = book;
+        }
 
-            // Get all pages from book in correct order
-            List<Page> pages = new List<Page>();
-            pages.AddRange(book.Other.Where(p => p.Order < Order.LAST));
-            book.Chapters.ForEach(c => pages.AddRange(c.Pages.Where(p => Path.GetExtension(p.Url) != ".pdf")));
-            pages.AddRange(book.Other.Where(p => p.Order == Order.LAST));
-
+        internal void Generate()
+        {
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + _book;
+            
             // Get filename of all pages
-            List<string> files = pages.Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html")).ToList();
+            List<string> files = _book.Pages
+                .Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html"))
+                .ToList();
 
             // Generate pdfs
             //files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
@@ -37,7 +40,7 @@ namespace ProbToPdf
             //Execute($"pdfunite {path}\\*.pdf {path}\\output.pdf");
         }
 
-        private static void Execute(string command)
+        private void Execute(string command)
         {
             Log.Information("Executing: " + command);
             using (var ps = PowerShell.Create())

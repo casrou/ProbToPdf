@@ -22,30 +22,16 @@ namespace ProbToPdf
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.Console()
-                //.WriteTo.File("log.txt")
                 .CreateLogger();
 
-            //initializing services
-            var services = new ServiceCollection()
-                .AddTransient<HtmlWeb>()
-                //.AddTransient<ICar, Car>()
-                .BuildServiceProvider();
-            
-            //Stopwatch stopwatch = Stopwatch.StartNew();
-
-            Book book = new Book("book.json", services);
-
-            book.Process();
+            Book book = new Book("book.json");
 
             Downloader downloader = new Downloader(book);
-            Downloader.Download(book);
-            
-            PDFGenerator.Generate(book);
-            
-            //stopwatch.Stop();
+            downloader.Download();
 
-            // Write hours, minutes and seconds.
-            //Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", stopwatch.Elapsed);
+            PDFGenerator generator = new PDFGenerator(book);
+            generator.Generate();
+
             Console.ReadLine();
         }
     }

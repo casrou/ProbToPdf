@@ -11,19 +11,16 @@ namespace ProbToPdf
 {
     class Page
     {
-        private HtmlWeb _htmlWeb;
-
         public string Url { get; set; }        
-        public string Content { get; set; }        
-        //public Order Order { get; set; } = Order.DEFAULT;
+        public string Content { get; set; }
+        public Order Order { get; set; } = Order.DEFAULT;
 
-        public void Process(HtmlWeb htmlWeb)
+        public void Process()
         {
-            //if (Path.GetExtension(Url) == ".pdf")
-            //{
-            //    return;
-            //};
-            _htmlWeb = htmlWeb;
+            if (Path.GetExtension(Url) == ".pdf")
+            {
+                return;
+            };
             Content = GetPage(Url);
         }
 
@@ -31,29 +28,25 @@ namespace ProbToPdf
         {
             Log.Information("Parsing: " + url);
             HtmlDocument html = DownloadHtml(url);
-
-            string result = ParseHtml(html).InnerHtml;
-            result = FixInlineMath(result);
-            result = AddStyling(result);
-            
-            return result;
+            return ParseHtml(html);
         }
 
-        private HtmlDocument DownloadHtml(string url)
+        private static HtmlDocument DownloadHtml(string url)
         {
-            var html = _htmlWeb.Load(url);
+            var web = new HtmlWeb();
+            var html = web.Load(url);
 
-            while (_htmlWeb.StatusCode != System.Net.HttpStatusCode.OK || html.DocumentNode.InnerLength < 100)
+            while (web.StatusCode != System.Net.HttpStatusCode.OK || html.DocumentNode.InnerLength < 100)
             {
-                Log.Warning("Url: " + url + ", Statuscode: " + _htmlWeb.StatusCode);
+                Log.Warning("Url: " + url + ", Statuscode: " + web.StatusCode);
                 Thread.Sleep(1000);
-                html = _htmlWeb.Load(url);
+                html = web.Load(url);
             }
 
             return html;
         }
 
-        private HtmlNode ParseHtml(HtmlDocument html)
+        private string ParseHtml(HtmlDocument html)
         {
             // TODO: Make parsing dynamic, fx. from a json file
             HtmlNode node = html.DocumentNode.SelectSingleNode("//*[@id=\"content\"]");
@@ -72,7 +65,10 @@ namespace ProbToPdf
             FixHrefs(node);
             FixSrcs(node);
 
-            return node;
+            return 
+                AddStyling(
+                    FixInlineMath(
+                        node.InnerHtml));
         }
 
         private static void FixHrefs(HtmlNode node)
@@ -162,5 +158,10 @@ namespace ProbToPdf
 
             return content + styling;
         }
+    }
+
+    enum Order
+    {
+        DEFAULT, FIRST, LAST
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using HtmlAgilityPack;
-using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
@@ -13,8 +9,6 @@ namespace ProbToPdf
 {
     class Book
     {
-        private ServiceProvider _services;
-
         public string Title { get; set; }
         public string Author { get; set; }
         public List<Chapter> Chapters { get; set; }
@@ -25,33 +19,31 @@ namespace ProbToPdf
                 return GetPages();
             }
         }
-        //public List<Page> Other { get; set; }
 
-        public Book(string filePath, ServiceProvider services)
+        public Book(string filePath)
         {
-            _services = services;
             string json = File.ReadAllText(filePath);
             Log.Information("Getting book template from json: " + filePath);
             JsonConvert.PopulateObject(json, this);
+            Process();
         }
 
-        public void Process()
+        private void Process()
         {
-            //GetPages().ForEach(p => p.Process());
-            Parallel.ForEach(GetPages().Where(page => Path.GetExtension(page.Url) != ".pdf"), p => p.Process(_services.GetService<HtmlWeb>()));            
+            Chapters.ForEach(c => c.Pages.ForEach(p => p.Process()));            
+        }
+
+        private List<Page> GetPages()
+        {
+            List<Page> pages = new List<Page>();
+            Chapters.ForEach(c => pages.AddRange(c.Pages));
+            return pages;
         }
 
         public override string ToString()
         {
             //return $"{Title} - {Author}";
             return "book";
-        }
-
-        public List<Page> GetPages()
-        {
-            List<Page> pages = new List<Page>();
-            Chapters.ForEach(c => pages.AddRange(c.Pages));
-            return pages;
         }
     }
 }
