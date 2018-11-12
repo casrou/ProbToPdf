@@ -4,17 +4,12 @@
 {
   "title": "Introduction to Probability, Statistics, and Random Processes",
   "author": "Hossein Pishro-Nik",
-  "other": [
-    {
-      "url": "https://www.probabilitycourse.com/preface.php",
-      "order": "FIRST"
-    },
-    {
-      "url": "https://www.probabilitycourse.com/bibliography.php",
-      "order": "LAST"
-    }
-  ],
   "chapters": [
+    { // Preface
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/preface.php" }
+      ]
+    },
     { // Chapter 1
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter1/1_0_0_introduction.php" },
@@ -256,6 +251,11 @@
       "pages": [
         { "url": "https://www.probabilitycourse.com/appendix/review_fourier_transform.php" },
         { "url": "https://www.probabilitycourse.com/appendix/some_important_distributions.php" }
+      ]
+    },
+    { // Bibliography
+      "pages": [
+        { "url": "https://www.probabilitycourse.com/bibliography.php" }
       ]
     }
   ]

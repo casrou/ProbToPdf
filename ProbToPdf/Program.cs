@@ -1,5 +1,6 @@
 ﻿using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,19 @@ namespace ProbToPdf
                 //.WriteTo.File("log.txt")
                 .CreateLogger();
 
+            //initializing services
+            var services = new ServiceCollection()
+                .AddTransient<HtmlWeb>()
+                //.AddTransient<ICar, Car>()
+                .BuildServiceProvider();
+            
             //Stopwatch stopwatch = Stopwatch.StartNew();
 
-            Book book = new Book("book.json");
+            Book book = new Book("book.json", services);
 
+            book.Process();
+
+            Downloader downloader = new Downloader(book);
             Downloader.Download(book);
             
             PDFGenerator.Generate(book);

@@ -11,16 +11,19 @@ namespace ProbToPdf
 {
     class Page
     {
-        public string Url { get; set; }        
-        public string Content { get; set; }
-        public Order Order { get; set; } = Order.DEFAULT;
+        private HtmlWeb _htmlWeb;
 
-        public void Process()
+        public string Url { get; set; }        
+        public string Content { get; set; }        
+        //public Order Order { get; set; } = Order.DEFAULT;
+
+        public void Process(HtmlWeb htmlWeb)
         {
-            if (Path.GetExtension(Url) == ".pdf")
-            {
-                return;
-            };
+            //if (Path.GetExtension(Url) == ".pdf")
+            //{
+            //    return;
+            //};
+            _htmlWeb = htmlWeb;
             Content = GetPage(Url);
         }
 
@@ -36,16 +39,15 @@ namespace ProbToPdf
             return result;
         }
 
-        private static HtmlDocument DownloadHtml(string url)
+        private HtmlDocument DownloadHtml(string url)
         {
-            var web = new HtmlWeb();
-            var html = web.Load(url);
+            var html = _htmlWeb.Load(url);
 
-            while (web.StatusCode != System.Net.HttpStatusCode.OK || html.DocumentNode.InnerLength < 100)
+            while (_htmlWeb.StatusCode != System.Net.HttpStatusCode.OK || html.DocumentNode.InnerLength < 100)
             {
-                Log.Warning("Url: " + url + ", Statuscode: " + web.StatusCode);
+                Log.Warning("Url: " + url + ", Statuscode: " + _htmlWeb.StatusCode);
                 Thread.Sleep(1000);
-                html = web.Load(url);
+                html = _htmlWeb.Load(url);
             }
 
             return html;
@@ -160,10 +162,5 @@ namespace ProbToPdf
 
             return content + styling;
         }
-    }
-
-    enum Order
-    {
-        DEFAULT, FIRST, LAST
     }
 }
