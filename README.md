@@ -12,8 +12,8 @@ npm i -g relaxedjs
 Download [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 
 ## How to
-The program downloads and generates all the pages as PDF to a folder named `book` on the Desktop.
-
+The program downloads and generates all the pages as PDF to a folder named `book` on the Desktop. Then, it automatically merges the files and creates one final PDF called `output.pdf`.
+<!--
 Then, use `pdftk` to merge the PDFs:
 
 - Open Terminal/Powershell
@@ -22,3 +22,4 @@ Then, use `pdftk` to merge the PDFs:
 ```
 pdftk *.pdf cat output output.pdf
 ```
+-->
