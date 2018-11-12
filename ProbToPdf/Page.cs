@@ -20,8 +20,14 @@ namespace ProbToPdf
             if (Path.GetExtension(Url) == ".pdf")
             {
                 return;
-            };
+            };            
+
             Content = GetPage(Url);
+
+            if (Url.Contains("'"))
+            {
+                Url = Url.Replace("'", string.Empty);
+            }
         }
 
         private string GetPage(string url)
