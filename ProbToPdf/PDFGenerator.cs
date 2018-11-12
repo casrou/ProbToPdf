@@ -34,10 +34,8 @@ namespace ProbToPdf
             RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
             RemoveFiles(files);
 
-            // WIP: Merge all pdfs
-            //Execute($"pdftk {path}\\*.pdf cat output {path}\\output.pdf");
+            // Merge all pdfs
             Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
-            //Execute($"pdfunite {path}\\*.pdf {path}\\output.pdf");
         }
 
         private void Execute(string command)
