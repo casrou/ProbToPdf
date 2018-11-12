@@ -24,8 +24,8 @@ namespace ProbToPdf
             List<string> files = pages.Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html")).ToList();
 
             // Generate pdfs
-            files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
-            //var result = Parallel.ForEach(files, f => Execute($"relaxed \"{f}\" --bo"));
+            //files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
+            var result = Parallel.ForEach(files, f => Execute($"relaxed \"{f}\" --bo"));
 
             // Remove temporary files
             RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
@@ -33,6 +33,7 @@ namespace ProbToPdf
 
             // WIP: Merge all pdfs
             //Execute($"pdftk {path}\\*.pdf cat output {path}\\output.pdf");
+            Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
             //Execute($"pdfunite {path}\\*.pdf {path}\\output.pdf");
         }
 
