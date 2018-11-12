@@ -28,12 +28,7 @@ namespace ProbToPdf
         {
             Log.Information("Parsing: " + url);
             HtmlDocument html = DownloadHtml(url);
-
-            string result = ParseHtml(html).InnerHtml;
-            result = FixInlineMath(result);
-            result = AddStyling(result);
-            
-            return result;
+            return ParseHtml(html);
         }
 
         private static HtmlDocument DownloadHtml(string url)
@@ -51,7 +46,7 @@ namespace ProbToPdf
             return html;
         }
 
-        private HtmlNode ParseHtml(HtmlDocument html)
+        private string ParseHtml(HtmlDocument html)
         {
             // TODO: Make parsing dynamic, fx. from a json file
             HtmlNode node = html.DocumentNode.SelectSingleNode("//*[@id=\"content\"]");
@@ -70,7 +65,10 @@ namespace ProbToPdf
             FixHrefs(node);
             FixSrcs(node);
 
-            return node;
+            return 
+                AddStyling(
+                    FixInlineMath(
+                        node.InnerHtml));
         }
 
         private static void FixHrefs(HtmlNode node)

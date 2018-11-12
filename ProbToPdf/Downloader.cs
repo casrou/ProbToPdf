@@ -10,23 +10,26 @@ namespace ProbToPdf
 {
     class Downloader
     {
-        internal static void Download(Book book)
+        private string _path;
+        private Book _book;
+
+        public Downloader(Book book)
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+            _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+            _book = book;
 
-            Log.Information("Creating book folder at: " + path);
-            Directory.CreateDirectory(path);
-            File.WriteAllText(path + "\\config.yml", "plugins:\n- mathjax");
-
-            book.Other
-                .ForEach(p => WritePage(p, path));
-
-            book.Chapters
-                .ForEach(c => c.Pages
-                .ForEach(p => WritePage(p, path)));
+            Log.Information("Creating book folder at: " + _path);
+            Directory.CreateDirectory(_path);
+            File.WriteAllText(_path + "\\config.yml", "plugins:\n- mathjax");
         }
 
-        private static void WritePage(Page p, string path)
+        internal void Download()
+        {
+            _book.Pages
+                .ForEach(p => WritePage(p));
+        }
+
+        private void WritePage(Page p)
         {
             string page = p.Url.Split('/').Last();
             Log.Information("Writing page to disk: " + p.Url);
@@ -34,12 +37,12 @@ namespace ProbToPdf
             {
                 using (WebClient client = new WebClient())
                 {
-                    client.DownloadFile(p.Url, path + "\\" + page);
+                    client.DownloadFile(p.Url, _path + "\\" + page);
                 }
             } else
             {
                 page = page.Replace(".php", ".html");
-                File.WriteAllTextAsync(path + "\\" + page, p.Content);
+                File.WriteAllTextAsync(_path + "\\" + page, p.Content);
             }            
         }
     }

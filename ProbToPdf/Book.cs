@@ -12,7 +12,13 @@ namespace ProbToPdf
         public string Title { get; set; }
         public string Author { get; set; }
         public List<Chapter> Chapters { get; set; }
-        public List<Page> Other { get; set; }
+        public List<Page> Pages
+        {
+            get
+            {
+                return GetPages();
+            }
+        }
 
         public Book(string filePath)
         {
@@ -24,8 +30,14 @@ namespace ProbToPdf
 
         private void Process()
         {
-            Other.ForEach(o => o.Process());
             Chapters.ForEach(c => c.Pages.ForEach(p => p.Process()));            
+        }
+
+        private List<Page> GetPages()
+        {
+            List<Page> pages = new List<Page>();
+            Chapters.ForEach(c => pages.AddRange(c.Pages));
+            return pages;
         }
 
         public override string ToString()
