@@ -97,7 +97,12 @@ namespace ProbToPdf
                 string newHref = href.Attributes["href"].Value;
                 newHref = newHref.StartsWith("//") ? newHref.Substring(2) : newHref;
                 //newHref = newHref.StartsWith("www") ? "http://" + newHref : newHref;
-                newHref = !newHref.StartsWith("http") ? "http://" + newHref : newHref;
+                if (newHref.StartsWith("chapter")) {
+                    newHref = newHref.Split('/')[1]; // local href, eg. chapter11/11_1_2_basic_concepts_of_the_poisson_process.php#equation11_1 (without chapter11)
+                } else
+                {
+                    newHref = !newHref.StartsWith("http") ? "http://" + newHref : newHref;
+                }                
                 href.Attributes["href"].Value = newHref;
             }
         }
