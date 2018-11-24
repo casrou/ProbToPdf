@@ -13,6 +13,10 @@
     content: counter(problem);
 }*/
 
+.solvedprob ul a, .cbox {
+    page-break-inside: avoid;
+}
+
 @page {
     margin: 15mm 10mm 15mm 10mm;
 }
