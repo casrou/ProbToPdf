@@ -32,7 +32,7 @@ namespace ProbToPdf
         private void WritePage(Page p)
         {
             string page = p.Url.Split('/').Last();
-            Log.Information("Writing page to disk: " + p.Url);
+            Log.Information("Writing page to disk: " + _path + "\\" + page);
             if (Path.GetExtension(p.Url) == ".pdf")
             {
                 using (WebClient client = new WebClient())
