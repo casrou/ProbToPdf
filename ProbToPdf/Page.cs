@@ -54,8 +54,8 @@ namespace ProbToPdf
 
         private string ParseHtml(HtmlDocument html)
         {
-            // TODO: Make parsing dynamic, fx. from a json file
             HtmlNode node = html.DocumentNode.SelectSingleNode("//*[@id=\"content\"]");
+            node.ChildNodes.Add(html.DocumentNode.SelectSingleNode("(//style)[1]")); // Include problem/lemma/theorem/definition numbering (#8)
 
             // Remove unwanted html elements
             List<string> xpaths = new List<string>
@@ -96,7 +96,8 @@ namespace ProbToPdf
                 */
                 string newHref = href.Attributes["href"].Value;
                 newHref = newHref.StartsWith("//") ? newHref.Substring(2) : newHref;
-                newHref = newHref.StartsWith("www") ? "https://" + newHref : newHref;
+                //newHref = newHref.StartsWith("www") ? "http://" + newHref : newHref;
+                newHref = !newHref.StartsWith("http") ? "http://" + newHref : newHref;
                 href.Attributes["href"].Value = newHref;
             }
         }
