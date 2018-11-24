@@ -99,13 +99,31 @@ namespace ProbToPdf
             foreach (var src in srcs)
             {
                 string newSrc = src.Attributes["src"].Value;
+
+                // If src is Youtube icon, replace it
                 if (newSrc == "//icons.iconarchive.com/icons/bokehlicia/captiva/32/web-google-youtube-icon.png")
                 {
                     newSrc = "https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png";
+                    src.Attributes["src"].Value = newSrc;
                     string style = src.Attributes["style"].Value;
                     src.Attributes["style"].Value = style + "height: 50px;";
+                    continue;
                 }
-                newSrc = (!newSrc.StartsWith("http") && !newSrc.StartsWith("www")) ? "https://www.probabilitycourse.com/" + newSrc : newSrc;
+
+                /*
+                    Fix various src formats
+
+                    Examples:
+                        //www.probabilitycourse.com/images/chapter6/Convex_b.png
+
+                    Correct format:
+                        http(s)://(www.)probabilitycourse.com/images/chapter6/Convex_b.png
+
+                */
+                newSrc = newSrc.StartsWith("//") ? newSrc.Substring(2) : newSrc;
+                newSrc = newSrc.StartsWith("www") ? newSrc.Substring(4) : newSrc;
+                newSrc = !newSrc.StartsWith("probabilitycourse") ? "probabilitycourse.com/" + newSrc : newSrc;
+                newSrc = !newSrc.StartsWith("http") ? "https://" + newSrc : newSrc;
                 src.Attributes["src"].Value = newSrc;
             }
         }
