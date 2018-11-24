@@ -23,3 +23,6 @@ Then, use `pdftk` to merge the PDFs:
 pdftk *.pdf cat output output.pdf
 ```
 -->
+
+#### Lastest generated version
+[output.pdf](output.pdf) (25-11-2018)
