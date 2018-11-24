@@ -142,33 +142,76 @@ namespace ProbToPdf
         */
         private static string FixInlineMath(string content)
         {
-            int counter = 0;
+            /*int counter = 0;
             StringBuilder sb = new StringBuilder();            
             for (int i = 0; i < content.Length; i++)
             {
-                if (!content[i].Equals('$'))
+                
+                if (!content[i].Equals('$')) // not $
+                {                    
+                    sb.Append(content[i]);
+                    continue;
+                }
+
+                // $
+
+                if (counter % 2 != 0) // between two $
+                {
+                    if (content[i + 1] == '$') // $$
+                    {                        
+                        i++;
+                        continue; // skip $$ between two $
+                    } else
+                    {
+                        sb.Append("\\)");
+                    }
+                } else
+                {
+                    if (content[i + 1] == '$') // $$
+                    {
+                        sb.Append("$$");
+                        counter += 2;
+                        continue;
+                    }
+                    sb.Append("\\(");
+                }
+                counter++;
+            }
+            return sb.ToString();*/
+
+            int counter = 0;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < content.Length; i++)
+            {
+                if (content[i] != '$')
                 {
                     sb.Append(content[i]);
+                    continue;
                 }
-                else
+
+                // $
+
+                if(content[i+1] != '$')
                 {
-                    if (content[i + 1] == '$')
+                    if (counter % 2 == 0)
                     {
-                        counter += 2;
+                        sb.Append("\\(");
                     }
                     else
                     {
-                        if (counter % 2 == 0)
-                        {
-                            sb.Append("\\(");
-                        }
-                        else
-                        {
-                            sb.Append("\\)");
-                        }
-                        counter++;
+                        sb.Append("\\)");
                     }
+                    counter++;
+                    continue;
                 }
+
+                // $$
+
+                if (counter % 2 == 0)
+                {
+                    sb.Append("$$");                    
+                }
+                i++;
             }
             return sb.ToString();
         }
