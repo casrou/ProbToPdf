@@ -84,6 +84,16 @@ namespace ProbToPdf
 
             foreach (var href in hrefs)
             {
+                /*
+                    Fix various href formats
+
+                    Examples:
+                        //en.wikipedia.org/wiki/Boy_or_Girl_paradox
+
+                    Correct format:
+                        http(s)://(www.)test.com
+
+                */
                 string newHref = href.Attributes["href"].Value;
                 newHref = newHref.StartsWith("//") ? newHref.Substring(2) : newHref;
                 newHref = newHref.StartsWith("www") ? "https://" + newHref : newHref;
@@ -115,9 +125,10 @@ namespace ProbToPdf
 
                     Examples:
                         //www.probabilitycourse.com/images/chapter6/Convex_b.png
+                        images/chapter1/transmission_color.png
 
                     Correct format:
-                        http(s)://(www.)probabilitycourse.com/images/chapter6/Convex_b.png
+                        http(s)://(www.)test.com/test.png
 
                 */
                 newSrc = newSrc.StartsWith("//") ? newSrc.Substring(2) : newSrc;
@@ -142,43 +153,6 @@ namespace ProbToPdf
         */
         private static string FixInlineMath(string content)
         {
-            /*int counter = 0;
-            StringBuilder sb = new StringBuilder();            
-            for (int i = 0; i < content.Length; i++)
-            {
-                
-                if (!content[i].Equals('$')) // not $
-                {                    
-                    sb.Append(content[i]);
-                    continue;
-                }
-
-                // $
-
-                if (counter % 2 != 0) // between two $
-                {
-                    if (content[i + 1] == '$') // $$
-                    {                        
-                        i++;
-                        continue; // skip $$ between two $
-                    } else
-                    {
-                        sb.Append("\\)");
-                    }
-                } else
-                {
-                    if (content[i + 1] == '$') // $$
-                    {
-                        sb.Append("$$");
-                        counter += 2;
-                        continue;
-                    }
-                    sb.Append("\\(");
-                }
-                counter++;
-            }
-            return sb.ToString();*/
-
             int counter = 0;
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < content.Length; i++)
