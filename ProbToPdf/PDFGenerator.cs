@@ -1,5 +1,6 @@
 ﻿using Serilog;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,14 +29,15 @@ namespace ProbToPdf
 
             // Generate pdfs
             //files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
-            var result = Parallel.ForEach(files, f => Execute($"relaxed \"{f}\" --bo"));
-
-            // Remove temporary files
-            RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
-            RemoveFiles(files);
+            ConcurrentBag<String> concurrentBag = new ConcurrentBag<string>(files); // thread-safe
+            var result = Parallel.ForEach(concurrentBag, f => Execute($"relaxed \"{f}\" --bo"));            
 
             // Merge all pdfs
             Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
+
+            // Remove temporary files
+            //RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
+            //RemoveFiles(files);
         }
 
         private void Execute(string command)
