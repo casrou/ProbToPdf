@@ -8,13 +8,17 @@
 .solvedprob ul ul, .extendlist ul ul {
     display: block !important;
 }
-/*.problem:after {
-    counter-increment: problem 1;
-    content: counter(problem);
-}*/
 
-.solvedprob ul a, .cbox {
+.solvedprob {
+    page-break-inside: auto;
+}
+
+.solvedprob ul a, .cbox, div, .extendlist ul li {
     page-break-inside: avoid;
+}
+
+.solvedprob ul a {
+    display: inline-block;
 }
 
 @page {
