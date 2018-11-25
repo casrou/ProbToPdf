@@ -55,7 +55,11 @@ namespace ProbToPdf
         private string ParseHtml(HtmlDocument html)
         {
             HtmlNode node = html.DocumentNode.SelectSingleNode("//*[@id=\"content\"]");
-            node.ChildNodes.Add(html.DocumentNode.SelectSingleNode("(//style)[1]")); // Include problem/lemma/theorem/definition numbering (#8)
+            HtmlNode numberingStyling = html.DocumentNode.SelectSingleNode("(//style)[1]"); // Include problem/lemma/theorem/definition numbering (#8)
+            if(numberingStyling != null)
+            {
+                node.ChildNodes.Add(numberingStyling);
+            }             
 
             // Remove unwanted html elements
             List<string> xpaths = new List<string>
