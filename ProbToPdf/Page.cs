@@ -13,7 +13,6 @@ namespace ProbToPdf
     {
         public string Url { get; set; }        
         public string Content { get; set; }
-        public Order Order { get; set; } = Order.DEFAULT;
 
         public void Process()
         {

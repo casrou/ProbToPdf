@@ -12,10 +12,11 @@
         { "url": "https://www.probabilitycourse.com/preface.php" }
       ]
     },
-    { // Chapter 1
+    { 
+      "title": "Chapter 1",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter1/1_0_0_introduction.php" },
-        { "url": "https://www.probabilitycourse.com/chapter1/1_1_0_what_is_probability.php" },
+        /*{ "url": "https://www.probabilitycourse.com/chapter1/1_1_0_what_is_probability.php" },
         { "url": "https://www.probabilitycourse.com/chapter1/1_1_1_example.php" },
         { "url": "https://www.probabilitycourse.com/chapter1/1_2_0_review_set_theory.php" },
         { "url": "https://www.probabilitycourse.com/chapter1/1_2_1_venn.php" },
@@ -35,10 +36,11 @@
         { "url": "https://www.probabilitycourse.com/chapter1/1_4_3_bayes_rule.php" },
         { "url": "https://www.probabilitycourse.com/chapter1/1_4_4_conditional_independence.php" },
         { "url": "https://www.probabilitycourse.com/chapter1/1_4_5_solved3.php" },
-        { "url": "https://www.probabilitycourse.com/chapter1/1_5_0_chapter1_problems.php" }
+        { "url": "https://www.probabilitycourse.com/chapter1/1_5_0_chapter1_problems.php" }*/
       ]
-    },
-    { // Chapter 2
+    }/*,
+    {
+      "title": "Chapter 2",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter2/2_1_0_counting.php" },
         { "url": "https://www.probabilitycourse.com/chapter2/2_1_1_ordered_with_replacement.php" },
@@ -49,7 +51,8 @@
         { "url": "https://www.probabilitycourse.com/chapter2/2_3_0_chapter2_problems.php" }
       ]
     },
-    { // Chapter 3
+    {
+      "title": "Chapter 3",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter3/3_1_1_random_variables.php" },
         { "url": "https://www.probabilitycourse.com/chapter3/3_1_2_discrete_random_var.php" },
@@ -65,7 +68,8 @@
         { "url": "https://www.probabilitycourse.com/chapter3/3_3_0_chapter3_problems.php" }
       ]
     },
-    { // Chapter 4
+    {
+      "title": "Chapter 4",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter4/4_0_0_intro.php" },
         { "url": "https://www.probabilitycourse.com/chapter4/4_1_0_continuous_random_vars_distributions.php" },
@@ -85,7 +89,8 @@
         { "url": "https://www.probabilitycourse.com/chapter4/4_4_0_chapter4_problems.php" }
       ]
     },
-    { // Chapter 5
+    {
+      "title": "Chapter 5",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter5/5_1_0_joint_distributions.php" },
         { "url": "https://www.probabilitycourse.com/chapter5/5_1_1_joint_pmf.php" },
@@ -106,7 +111,8 @@
         { "url": "https://www.probabilitycourse.com/chapter5/5_4_0_chapter_problems.php" }
       ]
     },
-    { // Chapter 6
+    {
+      "title": "Chapter 6",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter6/6_0_0_intro.php" },
         { "url": "https://www.probabilitycourse.com/chapter6/6_1_1_joint_distributions_independence.php" },
@@ -125,7 +131,8 @@
         { "url": "https://www.probabilitycourse.com/chapter6/6_3_0_chapter_problems.php" }
       ]
     },
-    { // Chapter 7
+    {
+      "title": "Chapter 7",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter7/7_0_0_intro.php" },
         { "url": "https://www.probabilitycourse.com/chapter7/7_1_0_limit_theorems.php" },
@@ -144,7 +151,8 @@
         { "url": "https://www.probabilitycourse.com/chapter7/7_3_0_chapter_problem.php" }
       ]
     },
-    { // Chapter 8
+    {
+      "title": "Chapter 8",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter8/8_1_0_intro.php" },
         { "url": "https://www.probabilitycourse.com/chapter8/8_1_1_random_sampling.php" },
@@ -174,7 +182,8 @@
         { "url": "https://www.probabilitycourse.com/chapter8/8_6_0_ch_probs.php" }
       ]
     },
-    { // Chapter 9
+    {
+      "title": "Chapter 9",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter9/9_1_0_bayesian_inference.php" },
         { "url": "https://www.probabilitycourse.com/chapter9/9_1_10_solved_probs.php" },
@@ -190,7 +199,8 @@
         { "url": "https://www.probabilitycourse.com/chapter9/9_2_0_ch_probs.php" }
       ]
     },
-    { // Chapter 10
+    {
+      "title": "Chapter 10",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php" },
         { "url": "https://www.probabilitycourse.com/chapter10/10_1_1_PDFs_and_CDFs.php" },
@@ -208,7 +218,8 @@
         { "url": "https://www.probabilitycourse.com/chapter10/10_3_0_ch_probs.php" }
       ]
     },
-    { // Chapter 11
+    {
+      "title": "Chapter 11",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter11/11_0_0_intro.php" },
         { "url": "https://www.probabilitycourse.com/chapter11/11_1_1_counting_processes.php" },
@@ -234,31 +245,35 @@
         { "url": "https://www.probabilitycourse.com/chapter11/11_5_0_end_of_chapter_problems.php" }
       ]
     },
-    { // Chapter 12
+    {
+      "title": "Chapter 12",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter12/Chapter_12.pdf" }
       ]
     },
-    { // Chapter 13
+    {
+      "title": "Chapter 13",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter13/Chapter_13.pdf" }
       ]
     },
-    { // Chapter 14
+    {
+      "title": "Chapter 14",
       "pages": [
         { "url": "https://www.probabilitycourse.com/chapter14/Chapter_14.pdf" }
       ]
     },
-    { // Appendix
+    {
+      "title": "Appendix",
       "pages": [
         { "url": "https://www.probabilitycourse.com/appendix/review_fourier_transform.php" },
         { "url": "https://www.probabilitycourse.com/appendix/some_important_distributions.php" }
       ]
     },
-    { // Bibliography
+    {
       "pages": [
         { "url": "https://www.probabilitycourse.com/bibliography.php" }
       ]
-    }
+    }*/
   ]
 }
