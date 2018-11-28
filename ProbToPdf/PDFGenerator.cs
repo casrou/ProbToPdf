@@ -34,15 +34,6 @@ namespace ProbToPdf
 
             // Merge all pdfs
             Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
-
-            // Generate PDF bookmarks from single pdfs
-            List<Bookmark> bookmarks = Bookmark.GetBookmarksFromBook(_book);
-
-            // Import bookmarks to merged PDF from bookmarks datafile
-
-            // Remove temporary files / Clean up
-            //RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
-            //RemoveFiles(files);
         }
 
         public static void Execute(string command)

@@ -29,8 +29,15 @@ namespace ProbToPdf
             Downloader downloader = new Downloader(book);
             downloader.Download();
 
-            PDFGenerator generator = new PDFGenerator(book);
-            generator.Generate();
+            PDFGenerator pdfGenerator = new PDFGenerator(book);
+            pdfGenerator.Generate();
+
+            BookmarkGenerator bookmarkGenerator = new BookmarkGenerator(book);
+            bookmarkGenerator.Generate();
+
+            // Remove temporary files / Clean up
+            //RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
+            //RemoveFiles(files);
 
             Console.ReadLine();
         }
