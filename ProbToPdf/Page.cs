@@ -13,6 +13,7 @@ namespace ProbToPdf
     {
         public string Url { get; set; }        
         public string Content { get; set; }
+        public string Title { get; set; }
 
         public void Process()
         {
@@ -58,7 +59,9 @@ namespace ProbToPdf
             if(numberingStyling != null)
             {
                 node.ChildNodes.Add(numberingStyling);
-            }             
+            }
+
+            Title = node.SelectSingleNode("//h2[1]").InnerText;
 
             // Remove unwanted html elements
             List<string> xpaths = new List<string>
