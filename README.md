@@ -12,17 +12,7 @@ npm i -g relaxedjs
 Download [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 
 ## How to
-The program downloads and generates all the pages as PDF to a folder named `book` on the Desktop. Then, it automatically merges the files and creates one final PDF called `output.pdf`.
-<!--
-Then, use `pdftk` to merge the PDFs:
-
-- Open Terminal/Powershell
-- Navigate to the `book` folder on the Desktop
-- Run
-```
-pdftk *.pdf cat output output.pdf
-```
--->
+When running the program, a PDF named `Introduction to Probability, Statistics, and Random Processes - Hossein Pishro-Nik` is created on the Desktop.
 
 #### Lastest generated version
 [output.pdf](output.pdf) (25-11-2018)
