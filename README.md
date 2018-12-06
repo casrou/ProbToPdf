@@ -12,7 +12,7 @@ npm i -g relaxedjs
 Download [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 
 ## How to
-When running the program, a PDF named `Introduction to Probability, Statistics, and Random Processes - Hossein Pishro-Nik` is created on the Desktop.
+The program generates a PDF named `Introduction to Probability, Statistics, and Random Processes - Hossein Pishro-Nik` on the Desktop.
 
 #### Lastest generated version
-[output.pdf](output.pdf) (25-11-2018)
+[Introduction to Probability, Statistics, and Random Processes - Hossein Pishro-Nik.pdf](Introduction%20to%20Probability%2C%20Statistics%2C%20and%20Random%20Processes%20-%20Hossein%20Pishro-Nik.pdf) (06-12-2018)
