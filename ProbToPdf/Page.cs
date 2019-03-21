@@ -137,7 +137,7 @@ namespace ProbToPdf
 
                     Examples:
                         //www.probabilitycourse.com/images/chapter6/Convex_b.png
-                        images/chapter1/transmission_color.png
+                        images/chapter1/transmission_color.png                    
 
                     Correct format:
                         http(s)://(www.)test.com/test.png
@@ -145,7 +145,7 @@ namespace ProbToPdf
                 */
                 newSrc = newSrc.StartsWith("//") ? newSrc.Substring(2) : newSrc;
                 newSrc = newSrc.StartsWith("www") ? newSrc.Substring(4) : newSrc;
-                newSrc = !newSrc.StartsWith("probabilitycourse") ? "probabilitycourse.com/" + newSrc : newSrc;
+                newSrc = !newSrc.Contains("probabilitycourse") ? "probabilitycourse.com/" + newSrc : newSrc;
                 newSrc = !newSrc.StartsWith("http") ? "https://" + newSrc : newSrc;
                 src.Attributes["src"].Value = newSrc;
             }
