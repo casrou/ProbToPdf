@@ -15,12 +15,12 @@ namespace ProbToPdf
 
         public Downloader(Book book)
         {
-            _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + book;
+            _path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "book");
             _book = book;
 
             Log.Information("Creating book folder at: " + _path);
             Directory.CreateDirectory(_path);
-            File.WriteAllText(_path + "\\config.yml", "plugins:\n- mathjax");
+            File.WriteAllText(Path.Combine(_path, "config.yml"), "plugins:\n- mathjax");
         }
 
         internal void Download()
@@ -32,17 +32,18 @@ namespace ProbToPdf
         private void WritePage(Page p)
         {
             string page = p.Url.Split('/').Last();
-            Log.Information("Writing page to disk: " + _path + "\\" + page);
+            string path = Path.Combine(_path, page);
+            Log.Information("Writing page to disk: " + path);
             if (Path.GetExtension(p.Url) == ".pdf")
             {
                 using (WebClient client = new WebClient())
                 {
-                    client.DownloadFile(p.Url, _path + "\\" + page);
+                    client.DownloadFile(p.Url, path);
                 }
             } else
             {
-                page = page.Replace(".php", ".html");
-                File.WriteAllTextAsync(_path + "\\" + page, p.Content);
+                path = path.Replace(".php", ".html");
+                File.WriteAllTextAsync(path, p.Content);
             }            
         }
     }

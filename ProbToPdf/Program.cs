@@ -39,6 +39,7 @@ namespace ProbToPdf
             //RemoveFiles(files.Select(f => f.Replace(".html", "_temp.htm")));
             //RemoveFiles(files);
 
+            Console.WriteLine("Done.");
             Console.ReadLine();
         }
     }

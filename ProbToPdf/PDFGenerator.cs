@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace ProbToPdf
@@ -20,20 +22,29 @@ namespace ProbToPdf
 
         internal void Generate()
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + _book;
+            String path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), _book.ToString());
             
             // Get filename of all pages
             List<string> files = _book.Pages
-                .Select(p => path + "\\" + p.Url.Split('/').Last().Replace(".php", ".html"))
+                .Select(p => Path.Combine(path, p.Url.Split('/').Last().Replace(".php", ".html")))
                 .ToList();
 
+            
+            bool isWindows = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            if(isWindows){
+                // Generate pdfs
+                files.ForEach(f => Execute($"relaxed \"{f}\" --bo")); // Windows
+                // Merge all pdfs
+                Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {Path.Combine(path, "output.pdf")}"); // Windows
+            } else {
             // Generate pdfs
-            files.ForEach(f => Execute($"relaxed \"{f}\" --bo"));
+                files.ForEach(f => $"relaxed \"{f}\" --bo".Bash()); // Linux
+                // Merge all pdfs
+                $"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {Path.Combine(path, "output.pdf")}".Bash(); // Linux
+            }
+
             //ConcurrentBag<String> concurrentBag = new ConcurrentBag<string>(files); // thread-safe
             //var result = Parallel.ForEach(concurrentBag, f => Execute($"relaxed \"{f}\" --bo")); 
-
-            // Merge all pdfs
-            Execute($"pdftk {String.Join(' ', files.Select(f => f.Replace(".html", ".pdf")))} cat output {path}\\output.pdf");
         }
 
         public static void Execute(string command)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace ProbToPdf
@@ -11,7 +12,7 @@ namespace ProbToPdf
     class BookmarkGenerator
     {
         private Book _book;
-        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\book";
+        private static string _path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "book");
 
         public BookmarkGenerator(Book book)
         {
@@ -31,31 +32,37 @@ namespace ProbToPdf
         private void ImportBookmarksFile()
         {
             Log.Information("Importing bookmarks");
-            string pdf = _path + "\\output.pdf";
-            string bookmarks = _path + "\\bookmarks.txt";
-            string final = _path + "\\final.pdf";
-            using (var ps = PowerShell.Create())
-            {
-                try
+            string pdf = Path.Combine(_path, "output.pdf");
+            string bookmarks = Path.Combine(_path, "bookmarks.txt");
+            string final = Path.Combine(_path, "final.pdf");
+
+            bool isWindows = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            if(isWindows){
+                using (var ps = PowerShell.Create())
                 {
-                    var results = ps.AddScript($"pdftk {pdf} update_info {bookmarks} output {final}").Invoke();                    
-                    foreach (var result in results)
+                    try
                     {
-                        Log.Debug(result.ToString());
+                        var results = ps.AddScript($"pdftk {pdf} update_info {bookmarks} output {final}").Invoke();                    
+                        foreach (var result in results)
+                        {
+                            Log.Debug(result.ToString());
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error("An error occured while dumping data for: " + pdf + "\n" +
+                            "Error: " + e.Message);
                     }
                 }
-                catch (Exception e)
-                {
-                    Log.Error("An error occured while dumping data for: " + pdf + "\n" +
-                        "Error: " + e.Message);
-                }
+            } else {
+                $"pdftk {pdf} update_info {bookmarks} output {final}".Bash();
             }
         }
 
         private void GenerateBookmarksFile(List<Bookmark> bookmarks)
         {
             Log.Information("Generating bookmarks");
-            string filepath = _path + "\\bookmarks.txt";
+            string filepath = Path.Combine(_path, "bookmarks.txt");
             string result = "";
             foreach (Bookmark bookmark in bookmarks)
             {
@@ -108,16 +115,27 @@ namespace ProbToPdf
         }        
 
         private static int GetNumberOfPages(Page page)
-        {           
-            // Get filepath of page            
-            string filepath = _path + "\\" + page.Url.Substring(page.Url.LastIndexOf('/') + 1).Replace(".php", ".pdf");
-            IEnumerable<PSObject> data = DumpData(filepath);
-            return int.Parse(data.First(pso => pso.ToString().Contains("NumberOfPages")).ToString().Split(':').Last());
+        {   
+            // Get filepath of page
+            string filepath = Path.Combine(_path, page.Url.Substring(page.Url.LastIndexOf('/') + 1).Replace(".php", ".pdf"));
+
+            bool isWindows = System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            if(isWindows){                
+                IEnumerable<PSObject> data = DumpData(filepath);
+                int.TryParse(data.FirstOrDefault(pso => pso.ToString().Contains("NumberOfPages"))?.ToString().Split(':').Last(), out int result);
+                return result;
+            } else 
+            {
+                var dumpdata = $"pdftk {filepath} dump_data".Bash();
+                var keyword = "NumberOfPages: ";
+                var subdump = dumpdata.Substring(dumpdata.IndexOf(keyword) + keyword.Length, 3);
+                var result = new String(subdump.Where(Char.IsDigit).ToArray());
+                return int.Parse(result);
+            }            
         }
 
         private static IEnumerable<PSObject> DumpData(string pdf)
-        {
-            Dictionary<string, string> dumpedData = new Dictionary<string, string>();
+        {            
             using (var ps = PowerShell.Create())
             {
                 try
