@@ -14,5 +14,5 @@ Download [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 ## How to
 The program generates a PDF named `final.pdf` in a folder called `book` on the Desktop.
 
-#### Lastest generated version
+#### Latest generated version
 [Introduction to Probability, Statistics, and Random Processes - Hossein Pishro-Nik.pdf](Introduction%20to%20Probability%2C%20Statistics%2C%20and%20Random%20Processes%20-%20Hossein%20Pishro-Nik.pdf) (2019-03-22)
